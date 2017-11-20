@@ -22,6 +22,14 @@
         tools:showIn="@layout/activity_example">
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnAlertCenter"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/center_alert"
+            android:textColor="@android:color/white"/>
+
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btnAlertDefault"
             style="@style/ExampleButton"
             android:layout_width="match_parent"

@@ -220,6 +220,20 @@ public final class Alerter {
     }
 
     /**
+     * Set Gravity of the title
+     *
+     * @param gravity Gravity of the title
+     * @return This Alerter
+     */
+    public Alerter setTitleGravity(final int gravity) {
+        if (getAlert() != null) {
+            getAlert().setTitleGravity(gravity);
+        }
+
+        return this;
+    }
+
+    /**
      * Sets the Alert Text
      *
      * @param textId Text String Resource

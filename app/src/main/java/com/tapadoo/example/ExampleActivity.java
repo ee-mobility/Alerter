@@ -4,6 +4,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        findViewById(R.id.btnAlertCenter).setOnClickListener(this);
         findViewById(R.id.btnAlertDefault).setOnClickListener(this);
         findViewById(R.id.btnAlertColoured).setOnClickListener(this);
         findViewById(R.id.btnAlertCustomIcon).setOnClickListener(this);
@@ -37,6 +39,10 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.btnAlertCenter: {
+                showAlertCenter();
+                break;
+            }
             case R.id.btnAlertColoured: {
                 showAlertColoured();
                 break;
@@ -81,6 +87,17 @@ public class ExampleActivity extends AppCompatActivity implements View.OnClickLi
                 showAlertDefault();
             }
         }
+    }
+
+    private void showAlertCenter() {
+        Alerter.create(ExampleActivity.this)
+                .setContentGravity(Gravity.CENTER)
+                .setTitleGravity(Gravity.CENTER)
+                .setTitle("Alert Title")
+                .setText("Content is correctly centered even with long text...")
+                .showIcon(false)
+                .disableOutsideTouch()
+                .show();
     }
 
     private void showAlertDefault() {

@@ -29,6 +29,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -373,8 +374,18 @@ public class Alert extends FrameLayout implements View.OnClickListener, Animatio
      * @param contentGravity Gravity of the Alert
      */
     public void setContentGravity(final int contentGravity) {
-        ((LayoutParams) rlContainer.getLayoutParams()).gravity = contentGravity;
+        ((FrameLayout.LayoutParams) rlContainer.getLayoutParams()).gravity = contentGravity;
         rlContainer.requestLayout();
+    }
+
+    /**
+     * Sets the Gravity of the title
+     *
+     * @param contentGravity Gravity of the title
+     */
+    public void setTitleGravity(final int contentGravity) {
+        ((LinearLayout.LayoutParams) tvTitle.getLayoutParams()).gravity = contentGravity;
+        tvTitle.requestLayout();
     }
 
     /**

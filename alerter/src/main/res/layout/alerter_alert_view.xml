@@ -37,12 +37,13 @@
                 android:maxHeight="@dimen/alerter_alert_icn_size"
                 android:maxWidth="@dimen/alerter_alert_icn_size"
                 android:src="@drawable/alerter_ic_notifications"
-                android:tint="@color/alert_default_icon_color"/>
+                android:tint="@color/alert_default_icon_color" />
 
             <LinearLayout
                 android:id="@+id/llAlertTextContainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/alerter_activity_horizontal_margin"
                 android:layout_marginLeft="@dimen/alerter_activity_horizontal_margin"
@@ -62,7 +63,7 @@
                     android:textAppearance="@style/AlertTextAppearance.Title"
                     android:visibility="gone"
                     tools:text="Title"
-                    tools:visibility="visible"/>
+                    tools:visibility="visible" />
 
                 <TextView
                     android:id="@+id/tvText"
@@ -72,8 +73,8 @@
                     android:paddingTop="@dimen/alerter_padding_small"
                     android:textAppearance="@style/AlertTextAppearance.Text"
                     android:visibility="gone"
-                    tools:text="Text"
-                    tools:visibility="visible"/>
+                    tools:text="Text long long long long"
+                    tools:visibility="visible" />
 
             </LinearLayout>
 
