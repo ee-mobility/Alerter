@@ -1,5 +1,7 @@
 # Alerter
 
+This fork adds the method `setTitleGravity(int gravity)` which allows centering the title of the alert.
+
 ### General
 
 [ ![Download](https://api.bintray.com/packages/tapadoo/maven/alerter/images/download.svg) ](https://bintray.com/tapadoo/maven/alerter/_latestVersion)
