@@ -8,7 +8,7 @@ apply plugin: 'maven'
 apply plugin: "maven-publish"
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.dariobanfi'
+group='com.android.eemobility'
 
 //Quality Standards
 apply from: rootProject.file('quality.gradle')
